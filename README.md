@@ -13,9 +13,9 @@ Tecnologías Utilizadas
 HTML
 CSS
 JavaScript
-Bootstrap 5
-Propósito
+Bootstrap 5 (no requerido en preentrega)
 
+Propósito
 Este proyecto tiene como finalidad:
 
 Practicar el uso de tecnologías frontend.
