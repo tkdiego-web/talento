@@ -1,0 +1,990 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Estilos para el header */
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: center; /* Centrar el texto en el header */
+    align-items: center;
+}
+main {
+    padding: 1rem;
+}
+
+section {
+    background-color: #f4f4f4;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+footer {
+background-color: #000000;
+color: white;
+text-align: center;
+padding: 1rem;
+position: relative;
+bottom: 0;
+width: 100%;
+box-shadow: 0 4px 2px rgba(0, 0, 0, 0.5); 
+}
+
+
+
+.cuotas-text {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0; 
+    white-space: nowrap; 
+}
+
+/* Estilos para el nav */
+
+nav {
+background-color: #fff;
+padding: 0.8rem 1rem;
+display: flex;
+flex-direction: row; 
+align-items: center;
+justify-content: space-between; 
+font-family: 'Kanit', sans-serif;
+font-weight: 700;   
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.logo {
+    height: 20%;
+    margin: 10px; 
+    }
+    
+nav .logo {
+margin-right: auto; 
+width: 120px; 
+}
+
+nav ul {
+list-style-type: none;
+display: flex;
+justify-content: center; 
+flex-grow: 1; 
+margin: 0; 
+padding: 0; 
+gap: 10px; 
+}
+
+nav ul li {
+margin: 0;
+}
+
+nav ul li a {
+color: black;
+text-decoration: none;
+padding: 0.5rem 0.5rem; 
+display: block;
+}
+
+nav ul li a:hover {
+background-color: #000000;
+color: #fff;
+}
+
+/* Estilo del botón de usuario */
+.user-button {
+border: none;
+background-color: #000000; 
+color: #fff; 
+font-size: 14px; 
+padding: 5px 10px; 
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease, border 0.3s ease;
+margin-left: 20px; 
+}
+
+.user-button:hover {
+background-color: #ffffff; 
+color: #000000; 
+border: 2px solid #000000; 
+}
+
+
+.social-icons {
+margin-left: auto; 
+}
+
+.social-icons a {
+color: black; 
+text-decoration: none;
+font-size: 1.2rem; 
+}
+
+.social-icons a:hover {
+color: #ccc; 
+}
+
+
+/* Estilo del botón de usuario */
+.user-button {
+    border: none;
+    background-color: #000000; 
+    color: #fff; 
+    font-size: 14px; 
+    padding: 5px 10px; 
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border 0.3s ease; 
+    margin-left: 20px; 
+}
+
+.user-button:hover {
+    background-color: #ffffff; 
+    color: #000000; 
+    border: 2px solid #000000;
+}
+
+/* Cambiar color de los iconos de redes sociales a negro */
+.social-icons a {
+    color: black; 
+    text-decoration: none;
+    font-size: 1.2rem; 
+}
+
+.social-icons a:hover {
+    color: #ccc; 
+}
+
+/*IMAGEN BANNER*/  
+.image-container {
+    width: 100%;
+    overflow: hidden; 
+}
+
+.image-container img {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+}
+
+/* Menú hamburguesa */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: black;
+}
+
+.menu-icon span {
+    display: block;
+    height: 3px;
+    width: 25px;
+    background-color: black;
+    margin: 5px 0;
+}
+
+/* Estilos para el submenú */
+nav ul li {
+position: relative; 
+}
+
+.submenu {
+display: none; 
+position: absolute; 
+top: 100%; 
+left: 0; 
+background-color: #fff; 
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+z-index: 1;
+padding: 0; 
+}
+
+nav ul li:hover .submenu {
+display: block;
+}
+
+.submenu li {
+white-space: nowrap; 
+}
+
+.submenu li a {
+padding: 0.5rem 1rem; 
+display: block; 
+color: black; 
+}
+
+.submenu li a:hover {
+background-color: #000; 
+color: #fff; 
+}
+
+
+/* POPUPS */
+.popupBox {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+display: none;
+z-index: 1000; 
+}
+
+.popupBox__content {
+position: relative;
+width: 700px; 
+height: 400px;
+background: #fff;
+border-radius: 20px; 
+display: flex;
+box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3); 
+}
+
+.popupBox__img {
+width: 350px; 
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.popupBox__img img {
+width: 90%; 
+border-radius: 15px; 
+}
+
+.popupBox__contentTwo {
+width: 350px; 
+padding: 20px;
+display: flex;
+flex-direction: column; 
+justify-content: center; 
+text-align: center; 
+}
+
+.popupBox__title {
+color: #ff0000;
+font-weight: bold; 
+font-size: 2.5em; 
+margin-bottom: 10px; 
+}
+
+.popupBox__titleTwo {
+font-size: 3.5em; 
+color: #000000; 
+margin: 10px 0;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+.popupBox__description {
+font-weight: 300; 
+font-size: 1.2em; 
+color: #666; 
+margin: 15px 0; 
+}
+
+.popupBox__btn {
+display: inline-block;
+padding: 12px 24px;
+background: #000000; 
+text-decoration: none;
+color: #fff; 
+border-radius: 8px; 
+transition: background 0.3s, transform 0.3s; 
+}
+
+.popupBox__btn:hover {
+background-color: #ffffff;
+color: #000000;
+border: 2px solid #000000;
+transform: translateY(-2px); 
+}
+
+.close {
+position: absolute;
+top: 15px;
+right: 15px;
+width: 40px;
+height: 40px;
+background: #f3f3f3 url(https://www.pikpng.com/pngl/m/302-3024308_close-icon-png-x-png-icon-clipart.png) no-repeat center;
+background-size: 20px; 
+z-index: 1100; 
+cursor: pointer;
+border-radius: 50%;
+}
+
+/* Para asegurar que los popups se vean bien en dispositivos móviles */
+@media (max-width: 768px) {
+    .popupBox__content {
+        flex-direction: column;
+        width: 98%;
+        height: auto;
+    }
+
+    .popupBox__img {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .popupBox__img img {
+        width: 70%;
+    }
+
+    .popupBox__contentTwo {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+
+
+@media (min-width:576px) and (max-width:1000px)
+{
+
+}
+
+@media (min-width:1001px) and (max-width:1200 px)
+{
+
+}
+
+@media  (max-width:1201 px)
+{
+  
+}
+
+
+
+/*TARJETAS PRODUCTOS*/
+
+.product-section h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333; 
+}
+
+.titulo-promocion {
+text-align: center; 
+margin: 20px 0; 
+font-size: 2rem;
+color: #000;
+}
+
+.card-container {
+display: flex;
+gap: 40px;
+margin-top: 30px; 
+justify-content: center; 
+flex-wrap: wrap; 
+}
+
+.card {
+background-color: #fff;
+border-radius: 10px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+width: 250px;
+text-align: center;
+padding: 20px;
+margin-top: 20px; 
+}
+.card img {
+width: 150px; 
+height: 150px; 
+object-fit: contain; 
+margin-bottom: 20px;
+}
+
+.card h2 {
+font-size: 18px;
+margin: 10px 0;
+}
+.card p {
+color: #777;
+font-size: 14px;
+margin: 10px 0;
+}
+.card .price {
+font-size: 24px;
+color: #000000; 
+font-weight: bold; 
+margin: 10px 0;
+}
+.card .stars {
+color: #ffcc00;
+margin: 10px 0;
+}
+.card .add-to-cart {
+display: block;
+width: 100%;
+padding: 10px;
+border: 1px solid #000000; 
+border-radius: 5px;
+background-color: #000000; 
+color: #ffffff; 
+font-size: 16px;
+cursor: pointer;
+transition: background-color 0.3s, border-color 0.3s;
+}
+
+.card .add-to-cart:hover {
+background-color: #ffffff; 
+color: #000000; 
+border-color: #000000; 
+}
+
+/*TARJETA RESPONSIVE*/ 
+@media (max-width: 768px) {
+    .card {
+        width: 330px; 
+    }
+
+    .card img {
+        width: 200px; 
+        height: 200px; 
+    }
+}
+
+/* Slider */
+/* Ajuste del margen entre sliders */
+.slider-container {
+    display: flex;
+    flex-direction: row; /* Alinea los sliders en una fila */
+    gap: 0.5em; /* Espacio reducido entre los sliders */
+    justify-content: center; /* Centra los sliders horizontalmente */
+  }
+  
+  .slider {
+    width: 561px; /* Asegúrate de que sea lo suficientemente ancho */
+    height: 200px; /* Ajusta a la altura de las imágenes */
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  
+  .slide {
+    flex-shrink: 0; /* Previene que se reduzcan las imágenes */
+    width: 100%; 
+    height: 100%;
+  }
+  
+  .slider::-webkit-scrollbar {
+    display: none; /* Oculta el scrollbar */
+  }
+  
+  .slide img {
+    width: 561px; /* Ancho exacto de la imagen */
+    height: 200px; /* Altura exacta de la imagen */
+    object-fit: cover; /* Asegura que las imágenes no se deformen */
+  }
+  
+  
+  @media (max-width: 768px) {
+    .slider {
+      width: 100%;
+      height: auto;
+    }
+  
+    .slide {
+      width: 100%;
+    }
+  
+    .slide img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  }
+  
+
+
+
+
+/* Cambios para responsive */
+
+@media (max-width: 768px) {
+nav {
+flex-direction: column; 
+}
+
+.logo {
+margin-bottom: 1rem; 
+}
+
+.social-icons {
+margin: 0; 
+display: flex; 
+justify-content: center;
+}
+
+.social-icons a {
+margin: 0 5px; 
+}
+
+nav ul {
+flex-direction: column; 
+display: none; 
+position: static; 
+background-color: white; 
+z-index: 10;
+padding: 1rem 0;
+margin: 0; 
+width: 100%; 
+}
+
+nav ul.show {
+display: flex; 
+}
+
+.menu-icon {
+display: block; 
+margin: 1rem 0; 
+}
+
+.user-button {
+margin: 0; 
+}
+
+.user-link {
+margin-top: 1rem; 
+}
+}
+
+.legal-btn {
+background-color: white;          
+color: black;                    
+border: 2px solid black;        
+border-radius: 5px;            
+padding: 10px 20px;             
+font-size: 16px;                
+cursor: pointer;                
+transition: background-color 0.3s; 
+}
+
+.legal-btn:hover {
+background-color: lightgray;     
+}
+
+
+
+/* Estilos inicio de sesión */
+.login {
+    margin: 90px auto;
+    width: 300px;
+}
+
+.login-screen {
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: #333 4px 4px 5px;
+}
+
+.centrartitulo {
+    text-align: center;
+    color: #777;
+}
+
+
+.login-label {
+    color: #292524;
+    font-size: 0.8rem;
+    margin-top: 0.5em;  
+    text-align: left; 
+    display: block; 
+    margin-left: 10px;
+}
+
+.control-group {
+    margin-bottom: 10px;
+}
+
+input {
+    text-align: center;
+    background-color: #ECF0F1;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 200;
+    padding: 10px 0;
+    width: 250px;
+    transition: border .5s;
+    margin-top: 0.5em;  
+}
+
+input:focus {
+    border: 2px solid #3498DB;
+    box-shadow: none;
+}
+
+.btn {
+    border: 2px solid transparent;
+    background: #3498DB;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 10px 0;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.25s;
+    display: block;
+    width: 250px;
+    margin: 0 auto;
+}
+
+.btn:hover {
+    background-color: #2980B9;
+}
+
+.login-link {
+    font-size: 12px;
+    color: #444;
+    display: block;
+    margin-top: 12px;
+}
+
+.credenciales {
+    font-size: 12px; 
+    color: #555; 
+    text-align: left;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+/* Sección de contacto */
+.contact-map-section {
+  display: flex;
+  flex-wrap: wrap; /* Permitir que los elementos se ajusten en pantallas pequeñas */
+  margin: 20px 0; /* Margen superior e inferior */
+}
+
+.contact-container,
+.map-container {
+  flex: 1; /* Hacer que cada contenedor ocupe el mismo espacio */
+  min-width: 300px; /* Ancho mínimo para asegurarse de que el contenido no sea demasiado pequeño */
+  margin: 10px; /* Espaciado entre los contenedores */
+  background-color: #fff; /* Fondo blanco para los contenedores */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para el contenedor */
+  padding: 20px; /* Espaciado interno */
+  transition: transform 0.3s; /* Transición para efectos hover */
+}
+
+
+
+.contact-container h2,
+.map-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contact-container input[type="text"],
+.contact-container input[type="email"],
+.contact-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.contact-container textarea {
+  height: 100px;
+  resize: none; /* Evitar el cambio de tamaño */
+}
+
+.contact-container input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background: #000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-container input[type="submit"]:hover {
+  background: #333;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .contact-map-section {
+      flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+      align-items: center; /* Centrar los elementos */
+  }
+
+  .contact-container,
+  .map-container {
+      max-width: 90%; /* Reducir el ancho máximo para que no ocupen todo el espacio */
+      margin: 10px auto; /* Margen vertical entre contenedores y centrar horizontalmente */
+      padding: 15px; /* Ajustar el padding para pantallas pequeñas */
+      height: auto; /* Ajustar la altura a auto para contenido variable */
+  }
+
+  .map-container {
+      height: 300px; /* Ajustar altura para el mapa también */
+  }
+
+  .contact-container h2,
+  .map-container h2 {
+      font-size: 1.5em; /* Ajustar el tamaño de fuente para títulos en móviles */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-container,
+  .map-container {
+      max-width: 100%; /* Hacer que ocupen todo el ancho en pantallas muy pequeñas */
+  }
+
+  .contact-container input[type="text"],
+  .contact-container input[type="email"],
+  .contact-container textarea,
+  .contact-container input[type="submit"] {
+      font-size: 14px; /* Ajustar tamaño de fuente en dispositivos pequeños */
+  }
+}
+
+
+
+/*Footer*/
+.footer-distributed{
+    background: #ffffff;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
+  }
+  
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right{
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  /* Footer left */
+  
+  .footer-distributed .footer-left{
+    width: 40%;
+  }
+  
+  /* The company logo */
+  
+  .footer-distributed h3{
+    color:  #000000;
+    font: normal 36px 'Open Sans', cursive;
+    margin: 0;
+  }
+  
+  .footer-distributed h3 span{
+    color:  rgb(0, 0, 0);
+  }
+  
+  /* Footer links */
+  
+  .footer-distributed .footer-links{
+    color:  #000000;
+    margin: 20px 0 12px;
+    padding: 0;
+  }
+  
+  .footer-distributed .footer-links a{
+    display:inline-block;
+    line-height: 1.8;
+    font-weight:400;
+    text-decoration: none;
+    color:  inherit;
+  }
+  
+  .footer-distributed .footer-company-name{
+    color:  #000000;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+  }
+  
+  /* Footer Center */
+  
+  .footer-distributed .footer-center{
+    width: 35%;
+  }
+  
+  .footer-distributed .footer-center i{
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 20px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+  }
+  
+  .footer-distributed .footer-center i.fa-envelope{
+    font-size: 17px;
+    line-height: 38px;
+  }
+  
+  .footer-distributed .footer-center p{
+    display: inline-block;
+    color: #000000;
+    font-weight:400;
+    vertical-align: middle;
+    margin:0;
+  }
+  
+  .footer-distributed .footer-center p span{
+    display:block;
+    font-weight: normal;
+    font-size:14px;
+    line-height:2;
+  }
+  
+  .footer-distributed .footer-center p a{
+    color:  rgb(0, 0, 0);
+    text-decoration: none;;
+  }
+  
+  .footer-distributed .footer-links a:before {
+    content: "|";
+    font-weight:300;
+    font-size: 20px;
+    left: 0;
+    color: #000000;
+    display: inline-block;
+    padding-right: 5px;
+  }
+  
+  .footer-distributed .footer-links .link-1:before {
+    content: none;
+  }
+  
+  /* Footer Right */
+  
+  .footer-distributed .footer-right{
+    width: 20%;
+  }
+  
+  .footer-distributed .footer-company-about{
+    line-height: 20px;
+    color:  #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+  }
+  
+  .footer-distributed .footer-company-about span{
+    display: block;
+    color:  #000000;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .footer-distributed .footer-icons{
+    margin-top: 25px;
+  }
+  
+  .footer-distributed .footer-icons a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color:  #000000;
+    border-radius: 2px;
+  
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+  
+    margin-right: 3px;
+    margin-bottom: 5px;
+  }
+  
+  /* If you don't want the footer to be responsive, remove these media queries */
+  
+  @media (max-width: 880px) {
+  
+    .footer-distributed{
+      font: bold 14px sans-serif;
+    }
+  
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right{
+      display: block;
+      width: 100%;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+  
+    .footer-distributed .footer-center i{
+      margin-left: 0;
+    }
+  
+  }
+
+  /*reseñas*/
+  .reviews-section {
+    text-align: center !important; /* Centra el texto */
+    padding: 20px;
+}
+
+.reviews-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Crea columnas responsivas */
+    gap: 20px; /* Espaciado entre tarjetas */
+    justify-items: center; /* Centra las tarjetas dentro de la cuadrícula */
+    margin-top: 20px;
+}
+
+.review-card {
+    background: #fff; /* Fondo blanco para las tarjetas */
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centra el texto dentro de la tarjeta */
+    width: 100%; /* Asegura que la tarjeta use todo el ancho disponible */
+    max-width: 300px; /* Limita el ancho máximo de la tarjeta */
+}
+
+.customer-photo img {
+    width: 80px; /* Ajusta el tamaño de la imagen */
+    height: 80px; /* Ajusta el tamaño de la imagen */
+    border-radius: 50%; /* Hace la imagen redonda */
+    object-fit: cover; /* Asegura que la imagen se recorte correctamente */
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+}
+
+

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend JavaScript de Talento TECH</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Fuente Google--> 
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap" rel="stylesheet">
+    
+
+
+       
+</head>
+<body>
+
+    <header>       
+        <div class="cuotas-text">6 cuotas sin interés</div> <!-- Texto centrado -->
+    </header>
+
+    <nav>
+      <img src="logo.png" alt="Logo" class="logo"> <!-- Logo -->
+      <ul id="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li>
+            <a href="productos.html">Productos <i class="fas fa-chevron-down"></i></a>
+              <ul class="submenu">
+                  <li><a href="productos.html">Hombre</a></li>
+                  <li><a href="productos.html">Mujer</a></li>
+                  <li><a href="productos.html">Niño</a></li>
+              </ul>
+          </li>
+          <li><a href="reseñas.html">Reseñas</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <div class="social-icons">
+        <a href="#" target="_blank"><i class="fas fa-shopping-cart"></i> </a>
+      </div>
+      <a href="login.html" class="user-link">
+          <button class="user-button">
+              <i class="fa fa-user"></i> Usuario
+          </button>
+      </a>
+      <div class="menu-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+  </nav>
+  
+  
+    <main>
+        <div class="image-container">
+            <img src="img/banner3.jpg" alt="Imagen de ancho completo">
+        </div>
+
+
+         <!-- SECTION reseñas -->    
+      
+         <section class="reviews-section">
+            <h1>Reseñas de nuestros clientes</h1>
+            <div class="reviews-container">
+                <div class="review-card">
+                    <div class="customer-photo">
+                        <img src="img/rese1.jpg" alt="Cliente 1">
+                    </div>
+                    <h2>Juan Pérez</h2>
+                    <p>"Excelente producto, superó mis expectativas!"</p>
+                </div>
+                <div class="review-card">
+                    <div class="customer-photo">
+                        <img src="img/rese2.jpg" alt="Cliente 2">
+                    </div>
+                    <h2>María López</h2>
+                    <p>"Un servicio al cliente excepcional y entrega rápida."</p>
+                </div>
+                <div class="review-card">
+                    <div class="customer-photo">
+                        <img src="img/rese3.jpg" alt="Cliente 3">
+                    </div>
+                    <h2>Carlos Gómez</h2>
+                    <p>"Muy satisfecho con mi compra, lo recomiendo."</p>
+                </div>
+                <div class="review-card">
+                    <div class="customer-photo">
+                        <img src="img/rese4.jpg" alt="Cliente 4">
+                    </div>
+                    <h2>Ana Torres</h2>
+                    <p>"Producto de alta calidad, definitivamente volveré a comprar."</p>
+                </div>
+                <div class="review-card">
+                    <div class="customer-photo">
+                        <img src="img/rese5.jpg" alt="Cliente 5">
+                    </div>
+                    <h2>Pedro Martínez</h2>
+                    <p>"La experiencia de compra fue excelente y muy fácil."</p>
+                </div>
+                <!-- Agrega más tarjetas de reseña según sea necesario -->
+            </div>
+        </section>
+        
+        
+        
+
+
+
+
+</main>
+
+
+<footer class="footer-distributed">
+
+      <div class="footer-left">
+
+       <img src="logo.png" alt="ADIDAS" height="50%" width="50%">
+
+        <p class="footer-links">
+          <a href="index.html" class="link-1">Inicio</a>
+          
+          <a href="pruductos.html">Productos</a>
+        
+          <a href="reselas.html">Reseñas</a>
+        
+          <a href="contacto.html">Contacto</a>
+          
+          </p>
+
+        <p class="footer-company-name">Adidas © 2024</p>
+      </div>
+
+      <div class="footer-center">
+
+        <div>
+          <i class="fa fa-map-marker"></i>
+          <p><span>444 S. Cedros Ave</span> Solana Beach, California</p>
+        </div>
+
+        <div>
+          <i class="fa fa-phone"></i>
+          <p>+1.555.555.5555</p>
+        </div>
+
+        <div>
+          <i class="fa fa-envelope"></i>
+          <p><a href="mailto:support@company.com">support@adidas.com</a></p>
+        </div>
+
+      </div>
+
+      <div class="footer-right">
+
+        <p class="footer-company-about">
+          <span>Nosotros</span>
+          Adidas es mucho más que ropa deportiva y ropa de entrenamiento. Nos asociamos con los mejores de la industria para co-crear. De esta manera, ofrecemos a nuestras seguidores la ropa deportiva y los estilos que mejor se adaptan a sus necesidades deportivas
+        </p>
+
+        <div class="footer-icons">
+
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          
+
+        
+
+        </div>
+
+      </div>
+
+    </footer>
+
+    <footer>
+        <p> Frontend JavaScript de Talento TECH<p>         
+          <strong>Alumno:</strong> Diego Fabregas </p>    <button class="legal-btn" onclick="mostrarAlerta()"">Aviso Legal</button>
+    </footer>
+
+    <script>
+       function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('show'); // Añade o elimina la clase 'show' para mostrar/ocultar el menú
+        }
+
+     
+
+
+    function mostrarAlerta() {
+  alert("La imagenes, fotos y logos utilizados pertenecen a la marca Adidas. Estos elementos se utilizan exclusivamente con fines educativos y no tienen intención comercial ni de infringir derechos de propiedad intelectual.");
+}
+    </script>
+</body>
+</html>
