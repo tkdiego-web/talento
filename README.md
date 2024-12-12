@@ -1,4 +1,4 @@
-﻿# preentregatalentotech
+﻿# Entrega FINAL talentotech
 Proyecto de Estudio: Sitio Web de Adidas
 Este proyecto se desarrolló como parte del curso de Frontend JavaScript de Talento TECH del Gobierno de la Ciudad de Buenos Aires (GCBA). 
 Su objetivo es crear un sitio web representativo de la marca Adidas, utilizando tecnologías modernas y buenas prácticas de
