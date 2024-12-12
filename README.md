@@ -13,7 +13,7 @@ Tecnologías Utilizadas
 HTML
 CSS
 JavaScript
-Bootstrap 5 (no requerido en preentrega)
+Bootstrap 5 
 
 Propósito
 Este proyecto tiene como finalidad:
