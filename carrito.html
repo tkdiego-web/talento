@@ -53,12 +53,7 @@
             </li>
           </ul>
           <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center">
-            <a href="carrito.html" class="mb-2 mb-lg-0 me-lg-3 position-relative">
-              <i class="fas fa-shopping-cart fa-lg"></i>
-              <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-circle bg-danger text-white">
-                0
-              </span>
-            </a>
+            
             <a href="login.html" class="btn btn-outline-dark user-button btn-sm">
               <i class="fa fa-user"></i> Usuario
             </a>
@@ -69,64 +64,40 @@
       </div>
     </nav>
   
-  
     <main>
-        <div class="image-container">
-            <img src="img/banner3.jpg" alt="Imagen de ancho completo">
-        </div>
-
-
-         <!-- SECTION reseñas -->    
-      
-         <section class="reviews-section">
-            <h1>Reseñas de nuestros clientes</h1>
-            <div class="reviews-container">
-                <div class="review-card">
-                    <div class="customer-photo">
-                        <img src="img/rese1.jpg" alt="Cliente 1">
-                    </div>
-                    <h2>Juan Pérez</h2>
-                    <p>"Excelente producto, superó mis expectativas!"</p>
-                </div>
-                <div class="review-card">
-                    <div class="customer-photo">
-                        <img src="img/rese2.jpg" alt="Cliente 2">
-                    </div>
-                    <h2>María López</h2>
-                    <p>"Un servicio al cliente excepcional y entrega rápida."</p>
-                </div>
-                <div class="review-card">
-                    <div class="customer-photo">
-                        <img src="img/rese3.jpg" alt="Cliente 3">
-                    </div>
-                    <h2>Carlos Gómez</h2>
-                    <p>"Muy satisfecho con mi compra, lo recomiendo."</p>
-                </div>
-                <div class="review-card">
-                    <div class="customer-photo">
-                        <img src="img/rese4.jpg" alt="Cliente 4">
-                    </div>
-                    <h2>Ana Torres</h2>
-                    <p>"Producto de alta calidad, definitivamente volveré a comprar."</p>
-                </div>
-                <div class="review-card">
-                    <div class="customer-photo">
-                        <img src="img/rese5.jpg" alt="Cliente 5">
-                    </div>
-                    <h2>Pedro Martínez</h2>
-                    <p>"La experiencia de compra fue excelente y muy fácil."</p>
-                </div>
-                <!-- Agrega más tarjetas de reseña según sea necesario -->
+        <section class="cart-section">
+          <h1>Carrito de Compras</h1>
+          <div class="container my-5">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>Imagen</th>
+                  <th>Producto</th>
+                  <th>Precio</th>
+                  <th>Cantidad</th>
+                  <th>Total</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody id="cart-items">
+                <!-- Filas dinámicas -->
+              </tbody>
+            </table>
+            
+            <!-- Botones alineados verticalmente -->
+            <div class="text-center mt-4">
+                <h3>Total General: $<span id="total-general">0</span></h3>
+              <button id="continue-shopping-button" class="btn btn-secondary mb-2"> <i class="fas fa-arrow-left"></i>  Seguir Comprando</button>
+              <button id="checkout-button" class="btn btn-success"><i class="fas fa-shopping-bag"></i>  Finalizar Compra</button>
             </div>
+          </div>
         </section>
-        
-        
-        
+      </main>
+      
 
 
 
 
-</main>
 
 
 <footer class="footer-distributed">
@@ -208,18 +179,19 @@
   alert("La imagenes, fotos y logos utilizados pertenecen a la marca Adidas. Estos elementos se utilizan exclusivamente con fines educativos y no tienen intención comercial ni de infringir derechos de propiedad intelectual.");
 }
 
-
 function actualizarContadorCarrito() {
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
   const contador = document.getElementById("cart-counter");
   contador.textContent = cart.length;
 }
 
-    </script>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 
-<script src="js/app.js"></script>
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/cart.js"></script>
+    
 </body>
 </html>

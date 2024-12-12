@@ -9,7 +9,10 @@
     <!-- Fuente Google--> 
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap" rel="stylesheet">
     
-
+     <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
        
 </head>
@@ -19,35 +22,52 @@
         <div class="cuotas-text">6 cuotas sin interés</div> <!-- Texto centrado -->
     </header>
 
-    <nav>
-      <img src="logo.png" alt="Logo" class="logo"> <!-- Logo -->
-      <ul id="menu">
-          <li><a href="index.html">Inicio</a></li>
-          <li>
-            <a href="productos.html">Productos <i class="fas fa-chevron-down"></i></a>
-              <ul class="submenu">
-                  <li><a href="#">Hombre</a></li>
-                  <li><a href="#">Mujer</a></li>
-                  <li><a href="#">Niño</a></li>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="logo.png" alt="Logo" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="productos.html" id="productosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Productos 
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="productosDropdown">
+                <li><a class="dropdown-item" href="productos.html">Hombre</a></li>
+                <li><a class="dropdown-item" href="productos.html">Mujer</a></li>
+                <li><a class="dropdown-item" href="productos.html">Niño</a></li>
               </ul>
-          </li>
-          <li><a href="reseñas.html">Reseñas</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-      </ul>
-      <div class="social-icons">
-        <a href="#" target="_blank"><i class="fas fa-shopping-cart"></i> </a>
-      </div>
-      <a href="login.html" class="user-link">
-          <button class="user-button">
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="reseñas.html">Reseñas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contacto">Contacto</a>
+            </li>
+          </ul>
+          <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center">
+            <a href="carrito.html" class="mb-2 mb-lg-0 me-lg-3 position-relative">
+              <i class="fas fa-shopping-cart fa-lg"></i>
+              <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-circle bg-danger text-white">
+                0
+              </span>
+            </a>
+            <a href="login.html" class="btn btn-outline-dark user-button btn-sm">
               <i class="fa fa-user"></i> Usuario
-          </button>
-      </a>
-      <div class="menu-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
+            </a>
+          </div>
+          
+                    
+        </div>
       </div>
-  </nav>
+    </nav>
   
   
     <main>
@@ -73,11 +93,9 @@
         </div>
 
         <section>
-         <!-- SECTION PRODUCTOS -->    
-       
-     <!-- SECTION PRODUCTOS -->    
-       
-     <section class="product-section">
+
+<!-- SECTION PRODUCTOS -->    
+<section class="product-section">
       <h1 >PRODUCTOS EN PROMOCIÓN</h1>
   <div class="card-container">
   <!-- Tarjetas de productos -->
@@ -105,7 +123,7 @@
         </i>
        </div>
      <button class="add-to-cart">
-        COMPRAR
+      <i class="fas fa-shopping-cart fa-lg"></i> COMPRAR
      </button>
     </div>
       <div class="card card-2">
@@ -132,7 +150,7 @@
         </i>
        </div>
        <button class="add-to-cart">
-        COMPRAR
+        <i class="fas fa-shopping-cart fa-lg" ></i> COMPRAR
        </button>
       </div>
       <div class="card card-3">
@@ -159,7 +177,7 @@
         </i>
        </div>
        <button class="add-to-cart">
-        COMPRAR
+        <i class="fas fa-shopping-cart fa-lg"></i> COMPRAR
        </button>
       </div>
       <div class="card card-4">
@@ -186,7 +204,7 @@
            </i>
           </div>
           <button class="add-to-cart">
-           COMPRAR
+            <i class="fas fa-shopping-cart fa-lg"></i> COMPRAR
           </button>
          </div>
   </div>
@@ -331,9 +349,74 @@
             menu.classList.toggle('show'); // Añade o elimina la clase 'show' para mostrar/ocultar el menú
         }
 
-         
+          // Mostrar el popup después de 1 segundo
+    const popup = document.querySelector(".popupBox");
+    const close = document.querySelector(".close");
+    
+    window.onload = function () {
+      setTimeout(() => {
+        popup.style.display = "block";
+      }, 1000);
+    };
+    
+    close.addEventListener("click", () => {
+      popup.style.display = "none";
+    });
 
+    const sliders = document.querySelectorAll('.slider');
 
+sliders.forEach((slider) => {
+  let timeInterval = 4000; // Cambia cada 4 segundos para una transición más pausada
+
+  let scrollInterval = setInterval(() => {
+    // Mueve el slider hacia la derecha
+    slider.scrollBy({
+      left: slider.clientWidth, // Mueve el ancho del slider
+      behavior: 'smooth'
+    });
+
+    // Reinicia el scroll al principio si llega al final
+    if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
+      slider.scrollTo({ left: 0, behavior: 'smooth' });
+    }
+  }, timeInterval); // Intervalo de tiempo aumentado para mayor pausa
+
+  // Detiene el auto-scroll al interactuar con el slider
+  slider.addEventListener('mouseover', () => {
+    clearInterval(scrollInterval);
+  });
+
+  // Reinicia el auto-scroll al salir del slider
+  slider.addEventListener('mouseout', () => {
+    scrollInterval = setInterval(() => {
+      slider.scrollBy({
+        left: slider.clientWidth,
+        behavior: 'smooth'
+      });
+
+      if (slider.scrollLeft + slider.clientWidth >= slider.scrollWidth) {
+        slider.scrollTo({ left: 0, behavior: 'smooth' });
+      }
+    }, timeInterval);
+  });
+});
+
+  window.onload = function () {
+      setTimeout(() => {
+        popup.style.display = "block";
+      }, 1000);
+    };
+    
+    close.addEventListener("click", () => {
+      popup.style.display = "none";
+    });
+
+    function mostrarAlerta() {
+  alert("La imagenes, fotos y logos utilizados pertenecen a la marca Adidas. Estos elementos se utilizan exclusivamente con fines educativos y no tienen intención comercial ni de infringir derechos de propiedad intelectual.");
+}
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

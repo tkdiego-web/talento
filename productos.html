@@ -9,7 +9,10 @@
     <!-- Fuente Google--> 
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap" rel="stylesheet">
     
-
+   <!-- Bootstrap CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+   <!-- Font Awesome -->
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
        
 </head>
@@ -19,408 +22,90 @@
         <div class="cuotas-text">6 cuotas sin interés</div> <!-- Texto centrado -->
     </header>
 
-    <nav>
-      <img src="logo.png" alt="Logo" class="logo"> <!-- Logo -->
-      <ul id="menu">
-          <li><a href="index.html">Inicio</a></li>
-          <li>
-            <a href="productos.html">Productos <i class="fas fa-chevron-down"></i></a>
-              <ul class="submenu">
-                  <li><a href="productos.html">Hombre</a></li>
-                  <li><a href="productos.html">Mujer</a></li>
-                  <li><a href="productos.html">Niño</a></li>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="logo.png" alt="Logo" class="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="productos.html" id="productosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Productos 
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="productosDropdown">
+                <li><a class="dropdown-item" href="productos.html">Hombre</a></li>
+                <li><a class="dropdown-item" href="productos.html">Mujer</a></li>
+                <li><a class="dropdown-item" href="productos.html">Niño</a></li>
               </ul>
-          </li>
-          <li><a href="reseñas.html">Reseñas</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-      <div class="social-icons">
-        <a href="#" target="_blank"><i class="fas fa-shopping-cart"></i> </a>
-      </div>
-      <a href="login.html" class="user-link">
-          <button class="user-button">
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="reseñas.html">Reseñas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#contacto">Contacto</a>
+            </li>
+          </ul>
+          <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center">
+            <a href="carrito.html" class="mb-2 mb-lg-0 me-lg-3 position-relative">
+              <i class="fas fa-shopping-cart fa-lg"></i>
+              <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-circle bg-danger text-white">
+                0
+              </span>
+            </a>
+            <a href="login.html" class="btn btn-outline-dark user-button btn-sm">
               <i class="fa fa-user"></i> Usuario
-          </button>
-      </a>
-      <div class="menu-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
+            </a>
+          </div>
+          
+                    
+        </div>
       </div>
-  </nav>
+    </nav>
+  
   
   
     <main>
-        <div class="image-container">
-            <img src="img/banner2.jpg" alt="Imagen de ancho completo">
+      <section class="product-section">
+        <h1>Encontrá zapatillas de adidas para todos los estilos.</h1>
+        <div class="container my-5">
+          <div id="productos-container" class="row">
+            <!-- voy a colocar las cards dinamicas -->
+          </div>
         </div>
-
-
-         <!-- SECTION PRODUCTOS -->    
-       
-     <section class="product-section">
-         <h1 >Encontrá zapatillas de adidas para todos los estilos. </h1>
-     <div class="card-container">
-     <!-- Tarjetas de productos -->
-     <div class="card card-1">
-     <img alt="A stylish wristwatch with a green strap" height="100" src="img/card1.jpg" width="100"/>
-       <h2>
-        OZNOVA 
-       </h2>
-       <p>
-       Dash Grey / Grey One Day / Halo Silver 
-       </p>
-       <div class="price">
-       $104.294
-       </div>
-       <div class="stars">
-           <i class="fas fa-star">
-           </i>
-           <i class="fas fa-star">
-           </i>
-           <i class="fas fa-star">
-           </i>
-           <i class="fas fa-star">
-           </i>
-           <i class="fas fa-star-half-alt">
-           </i>
-          </div>
-        <button class="add-to-cart">
-           COMPRAR
-        </button>
-       </div>
-         <div class="card card-2">
-          <img alt="A pair of red sports shoes" height="100" src="img/card2.jpg" width="100"/>
-          <h2>
-           OZELIA
-          </h2>
-          <p>
-          Cloud White / Cloud White / Crystal White
-          </p>
-          <div class="price">
-           $160.299
-          </div>
-          <div class="stars">
-           <i class="fas fa-star">
-           </i>
-           <i class="fas fa-star">
-           </i>
-           <i class="fas fa-star">
-           </i>
-           <i class="fas fa-star">
-           </i>
-           <i class="fas fa-star-half-alt">
-           </i>
-          </div>
-          <button class="add-to-cart">
-           COMPRAR
-          </button>
-         </div>
-         <div class="card card-3">
-          <img alt="An orange T-shirt" height="100" src="img/card3.jpg" width="100"/>
-          <h2>
-           OZWEEGO
-          </h2>
-          <p>
-           Cloud White / Almost Lime / Pulse Lime
-          </p>
-          <div class="price">
-           $148299
-          </div>
-          <div class="stars">
-           <i class="fas fa-star">
-           </i>
-           <i class="fas fa-star">
-           </i>
-           <i class="fas fa-star">
-           </i>
-           <i class="fas fa-star">
-           </i>
-           <i class="fas fa-star-half-alt">
-           </i>
-          </div>
-          <button class="add-to-cart">
-           COMPRAR
-          </button>
-         </div>
-         <div class="card card-4">
-             <img alt="A pair of red sports shoes" height="100" src="img/card4.jpg" width="100"/>
-             <h2>
-              OZNOVA BLACK
-             </h2>
-             <p>
-             Core Black / Core Black / Light Purple
-             </p>
-             <div class="price">
-              $183.999
-             </div>
-             <div class="stars">
-              <i class="fas fa-star">
-              </i>
-              <i class="fas fa-star">
-              </i>
-              <i class="fas fa-star">
-              </i>
-              <i class="fas fa-star">
-              </i>
-              <i class="fas fa-star-half-alt">
-              </i>
-             </div>
-             <button class="add-to-cart">
-              COMPRAR
-             </button>
-            </div>
-            <div class="card card-5">
-                <img alt="A pair of red sports shoes" height="100" src="img/card4.jpg" width="100"/>
-                <h2>
-                 OZNOVA BLACK
-                </h2>
-                <p>
-                Core Black / Core Black / Light Purple
-                </p>
-                <div class="price">
-                 $183.999
-                </div>
-                <div class="stars">
-                 <i class="fas fa-star">
-                 </i>
-                 <i class="fas fa-star">
-                 </i>
-                 <i class="fas fa-star">
-                 </i>
-                 <i class="fas fa-star">
-                 </i>
-                 <i class="fas fa-star-half-alt">
-                 </i>
-                </div>
-                <button class="add-to-cart">
-                 COMPRAR
-                </button>
-               </div>
-               <div class="card card-6">
-                <img alt="A pair of red sports shoes" height="100" src="img/card4.jpg" width="100"/>
-                <h2>
-                 OZNOVA BLACK
-                </h2>
-                <p>
-                Core Black / Core Black / Light Purple
-                </p>
-                <div class="price">
-                 $183.999
-                </div>
-                <div class="stars">
-                 <i class="fas fa-star">
-                 </i>
-                 <i class="fas fa-star">
-                 </i>
-                 <i class="fas fa-star">
-                 </i>
-                 <i class="fas fa-star">
-                 </i>
-                 <i class="fas fa-star-half-alt">
-                 </i>
-                </div>
-                <button class="add-to-cart">
-                 COMPRAR
-                </button>
-               </div>
-               <div class="card card-7">
-                <img alt="A pair of red sports shoes" height="100" src="img/card4.jpg" width="100"/>
-                <h2>
-                 OZNOVA BLACK
-                </h2>
-                <p>
-                Core Black / Core Black / Light Purple
-                </p>
-                <div class="price">
-                 $183.999
-                </div>
-                <div class="stars">
-                 <i class="fas fa-star">
-                 </i>
-                 <i class="fas fa-star">
-                 </i>
-                 <i class="fas fa-star">
-                 </i>
-                 <i class="fas fa-star">
-                 </i>
-                 <i class="fas fa-star-half-alt">
-                 </i>
-                </div>
-                <button class="add-to-cart">
-                 COMPRAR
-                </button>
-               </div>
-               <div class="card card-8">
-                <img alt="A pair of red sports shoes" height="100" src="img/card4.jpg" width="100"/>
-                <h2>
-                 OZNOVA BLACK
-                </h2>
-                <p>
-                Core Black / Core Black / Light Purple
-                </p>
-                <div class="price">
-                 $183.999
-                </div>
-                <div class="stars">
-                 <i class="fas fa-star">
-                 </i>
-                 <i class="fas fa-star">
-                 </i>
-                 <i class="fas fa-star">
-                 </i>
-                 <i class="fas fa-star">
-                 </i>
-                 <i class="fas fa-star-half-alt">
-                 </i>
-                </div>
-                <button class="add-to-cart">
-                 COMPRAR
-                </button>
-               </div>
-               <div class="card card-9">
-                <img alt="A pair of red sports shoes" height="100" src="img/card4.jpg" width="100"/>
-                <h2>
-                 OZNOVA BLACK
-                </h2>
-                <p>
-                Core Black / Core Black / Light Purple
-                </p>
-                <div class="price">
-                 $183.999
-                </div>
-                <div class="stars">
-                 <i class="fas fa-star">
-                 </i>
-                 <i class="fas fa-star">
-                 </i>
-                 <i class="fas fa-star">
-                 </i>
-                 <i class="fas fa-star">
-                 </i>
-                 <i class="fas fa-star-half-alt">
-                 </i>
-                </div>
-                <button class="add-to-cart">
-                 COMPRAR
-                </button>
-               </div>
-               <div class="card card-10">
-                <img alt="A pair of red sports shoes" height="100" src="img/card4.jpg" width="100"/>
-                <h2>
-                 OZNOVA BLACK
-                </h2>
-                <p>
-                Core Black / Core Black / Light Purple
-                </p>
-                <div class="price">
-                 $183.999
-                </div>
-                <div class="stars">
-                 <i class="fas fa-star">
-                 </i>
-                 <i class="fas fa-star">
-                 </i>
-                 <i class="fas fa-star">
-                 </i>
-                 <i class="fas fa-star">
-                 </i>
-                 <i class="fas fa-star-half-alt">
-                 </i>
-                </div>
-                <button class="add-to-cart">
-                 COMPRAR
-                </button>
-               </div>
-               <div class="card card-11">
-                <img alt="A pair of red sports shoes" height="100" src="img/card4.jpg" width="100"/>
-                <h2>
-                 OZNOVA BLACK
-                </h2>
-                <p>
-                Core Black / Core Black / Light Purple
-                </p>
-                <div class="price">
-                 $183.999
-                </div>
-                <div class="stars">
-                 <i class="fas fa-star">
-                 </i>
-                 <i class="fas fa-star">
-                 </i>
-                 <i class="fas fa-star">
-                 </i>
-                 <i class="fas fa-star">
-                 </i>
-                 <i class="fas fa-star-half-alt">
-                 </i>
-                </div>
-                <button class="add-to-cart">
-                 COMPRAR
-                </button>
-               </div>
-               <div class="card card-12">
-                <img alt="A pair of red sports shoes" height="100" src="img/card4.jpg" width="100"/>
-                <h2>
-                 OZNOVA BLACK
-                </h2>
-                <p>
-                Core Black / Core Black / Light Purple
-                </p>
-                <div class="price">
-                 $183.999
-                </div>
-                <div class="stars">
-                 <i class="fas fa-star">
-                 </i>
-                 <i class="fas fa-star">
-                 </i>
-                 <i class="fas fa-star">
-                 </i>
-                 <i class="fas fa-star">
-                 </i>
-                 <i class="fas fa-star-half-alt">
-                 </i>
-                </div>
-                <button class="add-to-cart">
-                 COMPRAR
-                </button>
-               </div>
-               <div class="card card-13">
-                <img alt="A pair of red sports shoes" height="100" src="img/card4.jpg" width="100"/>
-                <h2>
-                 OZNOVA BLACK
-                </h2>
-                <p>
-                Core Black / Core Black / Light Purple
-                </p>
-                <div class="price">
-                 $183.999
-                </div>
-                <div class="stars">
-                 <i class="fas fa-star">
-                 </i>
-                 <i class="fas fa-star">
-                 </i>
-                 <i class="fas fa-star">
-                 </i>
-                 <i class="fas fa-star">
-                 </i>
-                 <i class="fas fa-star-half-alt">
-                 </i>
-                </div>
-                <button class="add-to-cart">
-                 COMPRAR
-                </button>
-               </div>
-     </div>
-</section> 
-    
+      </section>
+  </main>
 
 
 
+<!-- Modal -->
+<div id="modal-container" class="modal fade" tabindex="-1" role="dialog">
+  <!-- El contenido del modal será generado dinámicamente -->
+</div>
 
-</main>
+<!-- Modal producto agregado -->
+<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="cartModalLabel">Producto agregado</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p id="modal-product-title"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Seguir comprando</button>      
+      </div>
+    </div>
+  </div>
+</div>
 
 
 <footer class="footer-distributed">
@@ -501,6 +186,19 @@
     function mostrarAlerta() {
   alert("La imagenes, fotos y logos utilizados pertenecen a la marca Adidas. Estos elementos se utilizan exclusivamente con fines educativos y no tienen intención comercial ni de infringir derechos de propiedad intelectual.");
 }
-    </script>
+
+function actualizarContadorCarrito() {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const contador = document.getElementById("cart-counter");
+  contador.textContent = cart.length;
+}
+
+
+
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/app.js"></script>
+    
 </body>
 </html>
